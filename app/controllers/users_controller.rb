@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     else
       render :new
     end
-    end
+  end
 
     def edit
         @user = User.find(params[:id])
@@ -22,8 +22,8 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         #@user.update(username: params[:username], email: params[:email], password: params[:password])
         @user.update(user_params)
-        redirect_to user_path(@user)
     end
+    
   private
 
   def user_params
