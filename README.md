@@ -1,24 +1,51 @@
-# README
+<br />
+<p align="center">
+  <a href="https://www.microverse.org/">
+    <img src="app/assets/images/microverse.png" alt="Logo" width="80" height="80">
+  </a>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  <h2 align="center">Rails forms</h2>
 
-Things you may want to cover:
+  <p align="center">
+    This project is part of the Microverse curriculum in Ruby on Rails module!
+  </p>
+</p>
 
-* Ruby version
+## About The Project
 
-* System dependencies
+in this project we build some forms both using nearly-pure HTML, no styling used and then graduating to using the helper methods that Rails provides.
 
-* Configuration
+<!-- INSTALLATION -->
+## Installation
 
-* Database creation
+You need to have this app or tools to start using it:
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+* [Rails](https://rubyonrails.org/): better to have rails version 2.6.5.
+* clone this repo ```git clone https://github.com/rindrajosia/micro-redit.git```
+* cd to the cloned folder and open with the terminal and run ```bundle install```
+* After installing all the [gems](https://rubygems.org/) run ```rake db:migrate``` which will execute all the generated migrations.
+* Then type ```rails console```
 
-* Database initialization
+### Built With
 
-* How to run the test suite
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+* [Rails](https://rubyonrails.org/):
+* [Rubocop](https://github.com/rubocop-hq/rubocop)
+* [Stickler](https://stickler-ci.com/)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Contributors
 
-* ...
+👤 **Rindra josia** 
+
+- GitHub: [@rindrajosia](https://github.com/rindrajosia)
+
+👤 **Ngenzi Herve**
+
+- GitHub: [@muhenge](https://github.com/muhenge)
+
+## Acknowledgements
+* [Microverse](https://www.microverse.org/)
+* [The Odin Project](https://www.theodinproject.com/)
+* [Ruby Documentation](https://www.ruby-lang.org/en/documentation/)
+* [Ruby on Rails](https://rubyonrails.org/)
