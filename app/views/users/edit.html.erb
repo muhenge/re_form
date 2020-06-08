@@ -1,25 +1,16 @@
+<h1>Edit</h1>
 <% if false %>
-<%= form_tag("/users/#{@user.id}", method: "PUT") do %>
-  <%= label_tag(:username, "Username:") %>
-  <%= text_field_tag(:username, @user.username) %><br><br>
-  <%= label_tag(:email, "Email:") %>
-  <%= email_field_tag 'email', @user.email %><br><br>
-  <%= label_tag(:password, "Password:") %>
-  <%= password_field_tag 'password', @user.password %><br><br>
-  <%= submit_tag("Save") %>
-<% end %>
-<% end %>
-<% if false %>
-<%= form_tag "/users/#{@user.id}", method: "put" do %>
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="user[username]" value="<%= @user.username %>"><br><br>
-  <label for="email">email:</label>
-  <input type="email" id="email" name="user[email]" value="<%= @user.email %>"><br><br>
-    <label for="password">Password:</label>
-  <input type="password" id="password" name="user[password]" value="<%= @user.password %>"><br><br>
-  <button type="submit">Update</button>
+<%= form_tag users_path"/#{@user.id}", method: "put" do %>
+  <%= label_tag("user[username]", "Username:") %>
+  <%= text_field_tag("user[username]", @user.username) %><br><br>
+  <%= label_tag("user[email]", "Email:") %>
+  <%= email_field_tag "user[email]", @user.email %><br><br>
+  <%= label_tag("user[password]", "Password:") %>
+  <%= password_field_tag "user[password]",  @user.password %><br><br>
+  <%= submit_tag("Update") %>
 <% end %>
 <%end%>
+
 
 <%= form_for(@user) do |f| %>
  <p>

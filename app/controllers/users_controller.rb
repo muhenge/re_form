@@ -4,13 +4,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    # @user = User.new(username: params[:username], email: params[:email], password: params[:password])
     @user = User.new(user_params)
 
     if @user.save
       redirect_to new_user_path
+      flash.notice = "User '#{@user.username}' Saved!"
     else
       render :new
+      flash.notice = "User '#{@user.username}'Error: Not Saved!"
     end
   end
 
@@ -20,8 +21,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    # @user.update(username: params[:username], email: params[:email], password: params[:password])
-    @user.update(user_params)
+    if @user.update(user_params)
+      redirect_to new_user_path
+      flash.notice = "User '#{@user.username}' Updated!"
+    else
+      render :edit
+      flash.notice = "User '#{@user.username}'Error: Not Updated!"
+    end
   end
 
   private

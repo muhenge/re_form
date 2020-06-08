@@ -2129,3 +2129,720 @@ Completed 204 No Content in 189ms (ActiveRecord: 140.1ms)
 
 
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2020-06-06 10:52:06 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/rindra/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rindra/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rindra/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 58ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2020-06-06 10:52:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2020-06-06 10:52:20 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 992ms (Views: 929.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-06 10:52:39 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 146ms (Views: 44.1ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-07 18:41:14 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/rindra/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rindra/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rindra/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 71ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-07 18:41:21 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (72.6ms)
+Completed 200 OK in 1105ms (Views: 992.7ms | ActiveRecord: 16.3ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2020-06-07 18:41:35 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ERd8nfe9VDN97CD+AB6mrRT92JuPnhf9bQ9JsJO3z2Drdqu9mx52AeEPIgseufnG6HMKIpay1+hM1fAO7POkug==", "user"=>{"username"=>"update tes", "email"=>"rrindrajosia@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "password" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "update tes"], ["password", "dddd"], ["updated_at", "2020-06-07 15:41:35.246826"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:24
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 108ms (ActiveRecord: 74.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-06-07 18:41:40 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rindra/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rindra/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-07 18:41:46 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:04:55 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/rindra/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 673ms (Views: 618.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:08:50 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 93ms (Views: 41.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:09:39 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/rindra/telechargement-dell/ruby/micro-col/form/re_form/app/views/users/edit.html.erb:39: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+...fer.append=( f.submit, 'save' );@output_buffer.safe_append='
+...                              ^
+/home/rindra/telechargement-dell/ruby/micro-col/form/re_form/app/views/users/edit.html.erb:41: syntax error, unexpected end, expecting ')'
+'.freeze; end 
+          ^~~
+/home/rindra/telechargement-dell/ruby/micro-col/form/re_form/app/views/users/edit.html.erb:43: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/rindra/telechargement-dell/ruby/micro-col/form/re_form/app/views/users/edit.html.erb:45: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/edit.html.erb:39: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/users/edit.html.erb:41: syntax error, unexpected end, expecting ')'
+app/views/users/edit.html.erb:43: syntax error, unexpected ensure, expecting ')'
+app/views/users/edit.html.erb:45: syntax error, unexpected end, expecting ')'
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:09:47 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2020-06-08 18:09:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:10:02 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:10:39 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:13:22 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (561.6ms)
+Completed 500 Internal Server Error in 567ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f610189c9c0>:0x00007f61027994c8>
+Did you mean?  @user):
+    2: 
+    3: <%= form_tag("/users/#{@user.id}", method: "PUT") do %>
+    4:   <%= label_tag(:username, "Username:") %>
+    5:   <%= text_field_tag(:username, user[username]) %><br><br>
+    6:   <%= label_tag(:email, "Email:") %>
+    7:   <%= email_field_tag 'email', user[email] %><br><br>
+    8:   <%= label_tag(:password, "Password:") %>
+  
+app/views/users/edit.html.erb:5:in `block in _app_views_users_edit_html_erb__4311937309678261238_70027315039920'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__4311937309678261238_70027315039920'
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:14:43 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (567.8ms)
+Completed 500 Internal Server Error in 576ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f610189c9c0>:0x00007f6100ee1f48>
+Did you mean?  @user):
+    2: 
+    3: <%= form_tag("/users/#{@user.id}", method: "PUT") do %>
+    4:   <%= label_tag(:username, "Username:") %>
+    5:   <%= text_field_tag(user[username], @user.username) %><br><br>
+    6:   <%= label_tag(:email, "Email:") %>
+    7:   <%= email_field_tag 'email', @user.email %><br><br>
+    8:   <%= label_tag(:password, "Password:") %>
+  
+app/views/users/edit.html.erb:5:in `block in _app_views_users_edit_html_erb__4311937309678261238_70027302110300'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__4311937309678261238_70027302110300'
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:15:06 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 221ms (Views: 217.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:15:16 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:15:41 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:17:23 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:17:26 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:17:34 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:17:59 +0300
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/edit"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:18:41 +0300
+  
+ActionController::RoutingError (No route matches [PUT] "/users/1/edit"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:18:44 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 24.1ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/users.1" for 127.0.0.1 at 2020-06-08 18:18:49 +0300
+  
+ActionController::RoutingError (No route matches [PUT] "/users.1"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/users.1" for 127.0.0.1 at 2020-06-08 18:21:10 +0300
+  
+ActionController::RoutingError (No route matches [PUT] "/users.1"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:21:12 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users.%2F1?method=put" for 127.0.0.1 at 2020-06-08 18:21:15 +0300
+Processing by UsersController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XK3kNWeSu/E1l82TuLyHeNAsL86IT0vepohgrvGjuTHPxz7YEZLDI37gDl1GYtojTQe1Bql5yrQpO7aaEXipQA==", "user"=>{"username"=>"update tes", "email"=>"rrindrajosia@gmail.com", "password"=>"[FILTERED]"}, "method"=>"put"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (139.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "update tes"], ["email", "rrindrajosia@gmail.com"], ["password", "dddd"], ["created_at", "2020-06-08 15:21:15.975318"], ["updated_at", "2020-06-08 15:21:15.975318"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (180.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 329ms (ActiveRecord: 320.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:21:16 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:23:56 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 26.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-06-08 18:24:12 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"9AlUenk4Q0JphpYslSENG4bCyOufB80U/qVFEJVmlLpnY46XDzg7kCLxVeJr/1BAG+lSI74xTH5xFpMkdb2Eyw==", "user"=>{"username"=>"test testj", "email"=>"kaos@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "test testj"], ["email", "kaos@gmail.com"], ["password", "0000"], ["created_at", "2020-06-08 15:24:12.703866"], ["updated_at", "2020-06-08 15:24:12.703866"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (154.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 163ms (ActiveRecord: 154.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:24:12 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:25:17 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:25:26 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:25:30 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-06-08 18:26:00 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"qgMYmcrmbRuE/pUArYqZbbS1dIZ95nD82zo1bkJgUlM5acJ0vOYVyc+JVs5TVMQ2KZ7uTlzQ8ZZUieNaortCIg==", "authenticity_token"=>"JIEZSXg11I8hfVv6jHJl4UwJVkciLlQPVknkyGmZBbu368OkDjWsXWoKmDRyrDi60SLMjwMY1WXZ+jL8iUIVyg==", "username"=>"rindra j", "email"=>"rjrj@gmail.com", "password"=>"[FILTERED]", "commit"=>"Save"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:33:in `user_params'
+app/controllers/users_controller.rb:7:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:30:49 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 172ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-06-08 18:30:55 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"qgMYmcrmbRuE/pUArYqZbbS1dIZ95nD82zo1bkJgUlM5acJ0vOYVyc+JVs5TVMQ2KZ7uTlzQ8ZZUieNaortCIg==", "authenticity_token"=>"8dLOe/NnpG7X2n1PY/FVS6xUYziT3nOnikS99l6lKt9iuBSWhWfcvJytvoGdLwgQMX/58LLo8s0F92vCvn46rg==", "user"=>{"username"=>"rindra j", "email"=>"rjrj@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (122.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "rindra j"], ["email", "rjrj@gmail.com"], ["password", "00000"], ["created_at", "2020-06-08 15:30:55.188464"], ["updated_at", "2020-06-08 15:30:55.188464"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (206.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 337ms (ActiveRecord: 328.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:30:55 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/2edit" for 127.0.0.1 at 2020-06-08 18:32:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/2edit"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2/edit" for 127.0.0.1 at 2020-06-08 18:33:05 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (111.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 161ms (Views: 45.5ms | ActiveRecord: 111.3ms)
+
+
+Started POST "/users.%2F2?method=put" for 127.0.0.1 at 2020-06-08 18:33:13 +0300
+Processing by UsersController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N58ce32sBo0wJAiUuKlDauyB9+eNFWzp3jxAftvyKB6k9caWC6x+X3tTy1pGdx4xcaptL6wj7YNRj5ZKOyk4bw==", "user"=>{"username"=>"updatedme", "email"=>"mu@gmail.commm", "password"=>"[FILTERED]"}, "commit"=>"Save", "method"=>"put"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "updatedme"], ["email", "mu@gmail.commm"], ["password", "passs"], ["created_at", "2020-06-08 15:33:13.865865"], ["updated_at", "2020-06-08 15:33:13.865865"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (125.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 135ms (ActiveRecord: 126.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:33:14 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:34:35 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:38:20 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 115ms (Views: 76.4ms | ActiveRecord: 20.7ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2020-06-08 18:38:33 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ms4nwteI5cK4oJ+28KhLcsZivqEcMnMa7AYhTEqiBQmhpP0voYidEPPXXHgOdhYpW0kkaT0E8nBjtfd4qnkVeA==", "user"=>{"username"=>"upda", "email"=>"rrindrajosia@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Update (56.3ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "password" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "upda"], ["password", "0000"], ["updated_at", "2020-06-08 15:38:33.584656"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (74.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 534ms (ActiveRecord: 131.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:38:34 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-06-08 18:39:41 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f5V6JMuq1mbotLGIxL7wBk3GNZdOCTz4EBWGMYgLliLs/6DJvaqutKPDckY6YK1d0O2vX28/vZKfplAFaNCGUw==", "user"=>{"username"=>"josiae", "email"=>"jks@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "josiae"], ["email", "jks@gmail.com"], ["password", "00000"], ["created_at", "2020-06-08 15:39:41.843722"], ["updated_at", "2020-06-08 15:39:41.843722"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (143.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 162ms (ActiveRecord: 145.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:39:42 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2020-06-08 18:43:05 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users.%2F1?method=put" for 127.0.0.1 at 2020-06-08 18:43:09 +0300
+Processing by UsersController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HIh5Xf9+SBxlYSCwwS1lMDnldfhsBj6RCCiQAlQhQ8GP4qOwiX4wzi4W434/8zhrpM7vME0wv/uHm0Y2tPpTsA==", "user"=>{"username"=>"updas", "email"=>"rrindrajosia@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update", "method"=>"put"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "updas"], ["email", "rrindrajosia@gmail.com"], ["password", "0000"], ["created_at", "2020-06-08 15:43:09.062165"], ["updated_at", "2020-06-08 15:43:09.062165"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (150.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 160ms (ActiveRecord: 152.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-06-08 18:43:09 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
