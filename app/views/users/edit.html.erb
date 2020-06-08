@@ -1,0 +1,31 @@
+<h1>Edit</h1>
+<% if false %>
+<%= form_tag users_path"/#{@user.id}", method: "put" do %>
+  <%= label_tag("user[username]", "Username:") %>
+  <%= text_field_tag("user[username]", @user.username) %><br><br>
+  <%= label_tag("user[email]", "Email:") %>
+  <%= email_field_tag "user[email]", @user.email %><br><br>
+  <%= label_tag("user[password]", "Password:") %>
+  <%= password_field_tag "user[password]",  @user.password %><br><br>
+  <%= submit_tag("Update") %>
+<% end %>
+<%end%>
+
+
+<%= form_for(@user) do |f| %>
+ <p>
+    <%= f.label :Username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
